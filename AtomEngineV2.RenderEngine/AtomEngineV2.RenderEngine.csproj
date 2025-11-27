@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\AtomEngineV2.GLib\AtomEngineV2.GLib.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Silk.NET.Assimp" Version="2.22.0" />
+    <PackageReference Include="Silk.NET.WebGPU" Version="2.22.0" />
+    <PackageReference Include="Silk.NET.WebGPU.Extensions.WGPU" Version="2.22.0" />
+    <PackageReference Include="Silk.NET.WebGPU.Extensions.Dawn" Version="2.22.0" />
+    <PackageReference Include="Silk.NET.WebGPU.Extensions.Disposal" Version="2.22.0" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+</Project>

@@ -1,0 +1,61 @@
+@page "/webgpu-renderer"
+@using System.Runtime.InteropServices
+@using Microsoft.JSInterop
+@using Silk.NET.Core.Native
+@using Silk.NET.Core.Contexts
+@using Silk.NET.WebGPU
+
+@using Silk.NET.WebGPU.Extensions.Dawn
+@using Silk.NET.WebGPU.Extensions.WGPU
+@inject IJSRuntime JSRuntime
+@implements IAsyncDisposable
+
+<div style="width: 600px; height: 400px; border: 1px solid #ccc;">
+    <canvas id="webgpu-canvas" width="600" height="400"></canvas>
+</div>
+
+@code {
+    private WebGPU _wgpu;
+    private Silk.NET.WebGPU.Device _device;
+    private SwapChain _swapChain;
+    private bool _isInitialized = false;
+
+    // --- Геометрия и Шейдеры ---
+    private readonly float[] _vertices =
+    {
+        // Позиция (X, Y)
+        -0.5f, -0.5f,  // Нижний левый
+         0.5f, -0.5f,  // Нижний правый
+        -0.5f,  0.5f,  // Верхний левый
+         0.5f,  0.5f   // Верхний правый
+    };
+
+    private const string Shaders = @"
+        @vertex
+        fn vs_main(@location(0) pos: vec2<f32>) -> @builtin(position) vec4<f32> {
+            return vec4<f32>(pos, 0.0, 1.0);
+        }
+
+        @fragment
+        fn fs_main() -> @location(0) vec4<f32> {
+            return vec4<f32>(1.0, 0.0, 0.0, 1.0); // Красный цвет
+        }
+    ";
+    // --- Конец Геометрии и Шейдеров ---
+
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+    }
+
+    private async Task InitializeWebGPUAsync()
+    {
+        
+    }
+    
+    
+    public async ValueTask DisposeAsync()
+    {
+    
+    }
+}

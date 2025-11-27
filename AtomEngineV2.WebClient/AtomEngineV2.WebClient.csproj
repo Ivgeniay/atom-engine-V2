@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <ItemGroup>
+    <ProjectReference Include="..\AtomEngineV2.UILib\AtomEngineV2.UILib.csproj" />
+    <ProjectReference Include="..\AtomEngineV2.AtomEngine\AtomEngineV2.AtomEngine.csproj" />
+    <ProjectReference Include="..\AtomEngineV2.RenderEngine\AtomEngineV2.RenderEngine.csproj" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <BlazorDisableThrowNavigationException>true</BlazorDisableThrowNavigationException>
+  </PropertyGroup>
+
+</Project>

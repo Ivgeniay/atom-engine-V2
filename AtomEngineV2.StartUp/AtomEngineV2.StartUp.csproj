@@ -2,6 +2,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\AtomEngineV2.WebClient\AtomEngineV2.WebClient.csproj" />
+    <ProjectReference Include="..\AtomEngineV2.DesktopClient\AtomEngineV2.DesktopClient.csproj" />
   </ItemGroup>
 
   <PropertyGroup>

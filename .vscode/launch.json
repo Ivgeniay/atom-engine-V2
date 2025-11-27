@@ -1,0 +1,20 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "DesktopClient: Run",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "DesktopClient: Build",
+            "program": "${workspaceFolder}/AtomEngineV2.DesktopClient/bin/Debug/net10.0/AtomEngineV2.DesktopClient.dll",
+            "args": ["-"],
+            "cwd": "${workspaceFolder}/AtomEngineV2.DesktopClient/bin/Debug/net10.0",
+            "stopAtEntry": false,
+            "console": "internalConsole",
+            "env": {
+                "GLFW_PLATFORM": "x11",
+                "LD_LIBRARY_PATH": "${workspaceFolder}/AtomEngineV2.DesktopClient/bin/Debug/net10.0/runtimes/linux-x64/native"
+            }
+        }
+    ]
+}
